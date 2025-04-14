@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zapatillas y mas - William A Gomez C</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <h1 style="color: #fff;"><strong>Zapatillas y mas</strong></h1>
+            </ul>
+        </nav>
+
+        <h2>Tienda William A Gomez C</h2>
+
+        <label for="categoria">Filtrar por categoría:</label>
+        <select id="categoria" onchange="filtrarPorCategoria()">
+            <option value="todos">Todos</option>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Vans">Vans</option>
+            <option value="Under Armour">Under Armour</option>
+            <option value="Converse">Converse</option>
+        </select>
+        <p>Encuentra las mejores zapatillas para tu estilo</p>
+
+        <div>
+            <img class="imagen_ingreso" src="https://th.bing.com/th/id/OIP.hGA3LPJPLuh6J7fMw-3vGAAAAA?rs=1&pid=ImgDetMain"
+                alt="Imagen ingreso - muchas marcas de zapatillas">
+            <img class="imagen_ingreso" src="https://images-na.ssl-images-amazon.com/images/I/61VHGAHmMKL._AC_UL1500_.jpg"
+                alt="Imagen ingreso - muchas marcas de zapatillas">
+            <img class="imagen_ingreso" src="https://th.bing.com/th/id/OIP.cc7M3_UiRUa04aSeWIUvogAAAA?rs=1&pid=ImgDetMain"
+                alt="Imagen ingreso - muchas marcas de zapatillas">
+            <img class="imagen_ingreso" src="https://img.lalr.co/cms/2024/02/23065150/1-2024-02-23T065146.843.png"
+                alt="Imagen ingreso - muchas marcas de zapatillas">
+        </div>
+    </header>
+
+    <section id="productos"></section>
+
+    <section id="contenedor-carrito" class="carrito">
+        <h2>🧾 Carrito de Compras</h2>
+        <p><strong>Productos en carrito: <span id="cantidad-carrito">0</span></strong></p>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total: $<span id="total">0.00</span></strong></p>
+
+        <button class="noselect vaciar boton_vaciar" onclick="vaciarCarrito()">
+            <span class="text_vaciar">Vaciar Carrito</span>
+            <span class="icon_vaciar">
+                <svg class="svg_vaciar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                </svg>
+            </span>
+        </button>
+
+        <div class="pago">
+            <h3>💳 Método de pago</h3>
+            <div id="paypal-button-container" style="margin-top: 10px; display: none;"></div>
+        </div>
+    </section>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD&components=buttons,funding-eligibility"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
