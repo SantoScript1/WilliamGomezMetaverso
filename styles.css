@@ -1,0 +1,245 @@
+body {
+    font-family: system-ui;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    margin: 0; /* Reset default margin */
+}
+
+header {
+    background-color: #0f6cbf;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    color: #222;
+    margin-top: 10px;
+}
+
+p {
+    color: #555;
+}
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.producto p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.producto button,
+.carrito button {
+    background-color: #0f6cbf;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover,
+.carrito button:hover {
+    background-color: #0056b3;
+}
+
+#contenedor-carrito {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: left;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contenedor-carrito h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+#lista-carrito li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+#lista-carrito li button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+}
+
+#lista-carrito li button:hover {
+    background-color: #c82333;
+}
+
+#contenedor-carrito p strong {
+    font-weight: bold;
+}
+
+.boton_vaciar {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e62222;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.boton_vaciar:hover {
+    background: #ff3636;
+}
+
+.pago {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.pago h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#paypal-button-container {
+    margin-top: 10px;
+}
+
+/* Estilos adicionales para la navegación */
+nav {
+    background-color: #0f6cbf; /* Color de fondo de la navbar */
+    color: white; /* Color de texto general */
+    padding: 10px 0; /* Espacio superior e inferior */
+    position: sticky; /* Fija la navbar en la parte superior al hacer scroll */
+    top: 0; /* Necesario para position: sticky; */
+    z-index: 100; /* Asegura que la navbar esté por encima de otros elementos */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Para centrar el h1 */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos de la lista en línea horizontalmente */
+    margin: 0;
+}
+
+nav h1 {
+    margin: 0; /* Asegura que el h1 no tenga márgenes predeterminados */
+    font-size: 1.5em;
+}
+
+/* Estilos para el filtro de categoría */
+header label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+header select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    width: 200px;
+}
+
+header p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #eee;
+}
+
+header > div {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.imagen_ingreso {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
